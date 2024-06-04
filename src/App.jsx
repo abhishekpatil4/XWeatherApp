@@ -52,7 +52,7 @@ function App() {
       <button type='submit'>Search</button>
     </form>
     {loading ?
-      <p>Loading data…</p>
+      <p>Loading data...</p>
       :
       cityData.condition !== ""
       &&
