@@ -13,11 +13,10 @@ function App() {
     windSpeed: ""
   })
   const fetchCityData = async (city) => {
-    const API_KEY = "47a0640b15414677bab100536242303"
+    const API_KEY = import.meta.env.VITE_WEATHER_API_KEY;
     const url = `https://api.weatherapi.com/v1/current.json?key=${API_KEY}&q=${city}`
     try {
       const res = await axios.get(url);
-      console.log("res: ", res.data);
       setCityData({
         temp: res?.data.current.temp_c,
         humidity: res?.data.current.humidity,
